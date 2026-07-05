@@ -1,7 +1,7 @@
 backend:
-  name: github
-  repo: chenfy1212/chenfy1212.github.io
-  branch: main
+  name: test-repo
+
+local_backend: true
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
