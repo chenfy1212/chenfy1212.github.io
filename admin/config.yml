@@ -3,29 +3,18 @@ backend:
   repo: chenfy1212/chenfy1212.github.io
   branch: main
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
-  - name: "site"
-    label: "基础内容"
+  - name: "content"
+    label: "网站内容"
     files:
-      - label: "网站基础信息"
-        name: "site"
-        file: "data/site.json"
+      - label: "网站数据"
+        name: "site_content"
+        file: "content.js"
         fields:
-          - { label: "网站标题", name: "title", widget: "string" }
-          - { label: "网站描述", name: "description", widget: "text" }
-
-  - name: "projects"
-    label: "案例管理"
-    folder: "projects"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "案例标题", name: "title", widget: "string" }
-      - { label: "城市", name: "city", widget: "string" }
-      - { label: "面积", name: "area", widget: "string", required: false }
-      - { label: "风格", name: "style", widget: "string", required: false }
-      - { label: "封面图", name: "cover", widget: "image" }
-      - { label: "案例正文", name: "body", widget: "markdown" }
+          - label: "提示"
+            name: "note"
+            widget: "hidden"
+            default: "当前阶段先测试后台能否打开，下一步再改成可视化案例表单。"
