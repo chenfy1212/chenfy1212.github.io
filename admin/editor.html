@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>木沐景观 CMS V2 预览版</title>
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <strong>木沐景观 CMS</strong>
+      <span>V2 预览版 · 先编辑，后接 GitHub 保存</span>
+    </div>
+    <div class="actions">
+      <button id="btn-generate">生成 content.js</button>
+      <button id="btn-download">下载 content.js</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <button class="tab active" data-tab="projects">案例管理</button>
+      <button class="tab" data-tab="services">服务项目</button>
+      <button class="tab" data-tab="process">服务流程</button>
+      <button class="tab" data-tab="categories">案例分类</button>
+      <button class="tab" data-tab="export">导出发布</button>
+    </aside>
+
+    <section class="panel active" id="projects">
+      <div class="panel-head"><h1>案例管理</h1><button data-add="projects">新增案例</button></div>
+      <div id="projects-list" class="cards"></div>
+    </section>
+
+    <section class="panel" id="services">
+      <div class="panel-head"><h1>服务项目</h1><button data-add="services">新增服务</button></div>
+      <div id="services-list" class="cards"></div>
+    </section>
+
+    <section class="panel" id="process">
+      <div class="panel-head"><h1>服务流程</h1><button data-add="process">新增流程</button></div>
+      <div id="process-list" class="cards"></div>
+    </section>
+
+    <section class="panel" id="categories">
+      <div class="panel-head"><h1>案例分类</h1><button data-add="categories">新增分类</button></div>
+      <div id="categories-list" class="cards"></div>
+    </section>
+
+    <section class="panel" id="export">
+      <div class="panel-head"><h1>导出发布</h1></div>
+      <p class="hint">当前版本不直接写入 GitHub。点击“生成 content.js”，复制下面内容，覆盖仓库根目录的 <code>content.js</code>，再 Commit changes。</p>
+      <textarea id="output" spellcheck="false"></textarea>
+    </section>
+  </main>
+
+  <script src="../content.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>
